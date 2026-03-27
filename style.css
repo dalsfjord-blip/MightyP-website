@@ -38,3 +38,29 @@ body{
     transform: scale(1.1); /* Bildet blir litt større */
     filter: brightness(0.8); /* Gjør bildet litt mørkere */
 }
+
+@media (max-width: 600px) {
+    /* 1. Gi menyen mer plass på sidene */
+    .main-header {
+        padding: 15px;
+        gap: 10px;
+    }
+
+    /* 2. Gjør menyen mer kompakt eller la den gå over flere linjer */
+    .hidden-menu {
+        flex-wrap: wrap;       /* Lar ikonene hoppe ned på ny linje om nødvendig */
+        justify-content: center;
+        gap: 15px;             /* Litt tettere mellom ikonene på mobil */
+    }
+
+    /* 3. Pass på at ikonene har en god "trykke-størrelse" */
+    .menu-item img {
+        width: 45px;           /* Ikke gjør dem for små, da blir de vanskelige å treffe */
+        height: 45px;
+    }
+
+    /* 4. Juster logoen for små skjermer */
+    .main-logo {
+        max-width: 120px;      /* Hindrer logoen i å dominere hele skjermen */
+    }
+}
