@@ -1,31 +1,28 @@
-body{
-    background-color: rgb(32,33,33);
+body {
+    background-color: rgb(32, 33, 33);
 }
 
 .main-header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px; /* Litt mindre gap siden elementene er mindre */
+    gap: 15px;
 }
 
 .main-logo {
-    width: 470px; /* Justert ned fra f.eks 170px */
+    width: 470px; 
     height: auto;
+    cursor: pointer;
 }
 
+/* MENY STYLING */
 .hidden-menu {
     display: flex;
-    gap: 15px; /* Litt tettere mellom ikonene */
+    gap: 15px;
     opacity: 0;
     visibility: hidden;
     transition: all 0.6s ease-out;
     transform: translateY(-10px);
-}
-
-.menu-item img {
-    width: 150px; /* Justert ned fra f.eks 50px */
-    height: auto;
 }
 
 .hidden-menu.show {
@@ -34,33 +31,45 @@ body{
     transform: translateY(0);
 }
 
-.menu-item img:hover {
-    transform: scale(1.1); /* Bildet blir litt større */
-    filter: brightness(0.8); /* Gjør bildet litt mørkere */
+.menu-item img {
+    width: 150px; 
+    height: auto;
+    transition: transform 0.2s;
 }
 
-@media (max-width: 600px) {
-    /* 1. Gi menyen mer plass på sidene */
-    .main-header {
-        padding: 15px;
-        gap: 10px;
-    }
+.menu-item img:hover {
+    transform: scale(1.1);
+    filter: brightness(0.8);
+}
 
-    /* 2. Gjør menyen mer kompakt eller la den gå over flere linjer */
-    .hidden-menu {
-        flex-wrap: wrap;       /* Lar ikonene hoppe ned på ny linje om nødvendig */
-        justify-content: center;
-        gap: 15px;             /* Litt tettere mellom ikonene på mobil */
-    }
+/* SOSIALE LENKER STYLING */
+.social-links {
+    display: flex;
+    justify-content: center; /* Endret fra flex-start for å midtstille */
+    gap: 15px;              /* Litt mellomrom mellom Insta og Face */
+    margin-bottom: 10px;
+    
+    /* VIKTIG: Legg til dette for at JS-effekten skal virke */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.6s ease-out;
+    transform: translateY(-5px);
+}
 
-    /* 3. Pass på at ikonene har en god "trykke-størrelse" */
-    .menu-item img {
-        width: 45px;           /* Ikke gjør dem for små, da blir de vanskelige å treffe */
-        height: 45px;
-    }
+/* Denne sørger for at de sosiale lenkene vises når JS legger til "show" */
+.social-links.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
 
-    /* 4. Juster logoen for små skjermer */
-    .main-logo {
-        max-width: 120px;      /* Hindrer logoen i å dominere hele skjermen */
-    }
+.social-links img {
+    width: 40px;
+    height: 40px;
+    transition: opacity 0.3s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.1);
+    filter: brightness(0.8);
 }
