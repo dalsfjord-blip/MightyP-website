@@ -1,0 +1,75 @@
+body {
+    background-color: rgb(32, 33, 33);
+}
+
+.main-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.main-logo {
+    width: 170px; 
+    height: auto;
+    cursor: pointer;
+    
+}
+
+/* MENY STYLING */
+.hidden-menu {
+    display: flex;
+    gap: 15px;
+    
+}
+
+.menu-item img {
+    width: 150px; 
+    height: auto;
+    transition: transform 0.2s;
+}
+
+.menu-item img:hover {
+    transform: scale(1.1);
+    filter: brightness(0.8);
+}
+
+/* SOSIALE LENKER STYLING */
+.social-links {
+    display: flex;
+    justify-content: center; /* Endret fra flex-start for å midtstille */
+    gap: 15px;              /* Litt mellomrom mellom Insta og Face */
+    margin-bottom: 10px;
+}
+
+
+.social-links img {
+    width: 40px;
+    height: 40px;
+    transition: opacity 0.3s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.1);
+    filter: brightness(0.8);
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;       /* Lar bildene hoppe ned på neste linje */
+    gap: 15px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.gallery-item {
+    flex: 1 1 auto;        /* Lar bildene vokse og krympe naturlig */
+    height: 250px;         /* Vi setter en "base"-høyde, men bredden blir original */
+    width: auto;           /* Beholder proporsjonene basert på høyden */
+    object-fit: contain;   /* Viser hele bildet uten beskjæring */
+    border-radius: 8px;
+}
+
+.gallery-item:hover {
+    transform: scale(1.7);
+}
