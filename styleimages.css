@@ -60,6 +60,7 @@ body {
     gap: 15px;
     justify-content: center;
     padding: 20px;
+    
 }
 
 .gallery-item {
@@ -67,7 +68,8 @@ body {
     height: 250px;         /* Vi setter en "base"-høyde, men bredden blir original */
     width: auto;           /* Beholder proporsjonene basert på høyden */
     object-fit: contain;   /* Viser hele bildet uten beskjæring */
-    border-radius: 8px;
+    border-radius: 8px;  
+    
 }
 
 .gallery-item:hover {

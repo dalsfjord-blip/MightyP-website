@@ -1,31 +1,107 @@
-body{
-    background-color: rgb(32,33,33);
-   }
+body {
+    background-color: rgb(32, 33, 33);
+}
 
 .main-header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px; /* Litt mindre gap siden elementene er mindre */
+    gap: 15px;
 }
 
 .main-logo {
-    width: 470px; /* Justert ned fra f.eks 170px */
+    width: 170px; 
     height: auto;
+    cursor: pointer;
+    
 }
 
-.menu {
+/* MENY STYLING */
+.hidden-menu {
     display: flex;
-    gap: 15px; /* Litt tettere mellom ikonene */
+    gap: 15px;
     
 }
 
 .menu-item img {
-    width: 150px; /* Justert ned fra f.eks 50px */
+    width: 150px; 
     height: auto;
+    transition: transform 0.2s;
 }
 
 .menu-item img:hover {
-    transform: scale(1.1); /* Bildet blir litt større */
-    filter: brightness(0.8); /* Gjør bildet litt mørkere */
+    transform: scale(1.1);
+    filter: brightness(0.8);
+}
+
+/* SOSIALE LENKER STYLING */
+.social-links {
+    display: flex;
+    justify-content: center; /* Endret fra flex-start for å midtstille */
+    gap: 15px;              /* Litt mellomrom mellom Insta og Face */
+    margin-bottom: 10px;
+}
+
+
+.social-links img {
+    width: 40px;
+    height: 40px;
+    transition: opacity 0.3s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.1);
+    filter: brightness(0.8);
+}
+
+
+/* 1. Register your local font at the top */
+@font-face {
+    font-family: 'Monument Extended';
+    src: url('fonts/MonumentExtended-Ultrabold.otf') format('opentype');
+    font-weight: 800;
+}
+
+/* 2. Your existing gallery layout */
+.video-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; /* Increased gap to give text some breathing room */
+    justify-content: center;
+    padding: 40px;
+}
+
+/* 3. The New Container */
+.video-item {
+    display: flex;
+    flex-direction: column; /* Stacks video and text vertically */
+    align-items: center;    /* Centers the text under the video */
+    width: 640px;           /* Matches your video width */
+}
+
+/* 4. Your existing video styles (slightly tweaked for the container) */
+video {
+    width: 100%;            /* Makes video fill the container width */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+    background-color: #000;
+}
+
+/* Apply the hover effect to the video only */
+video:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.7);
+}
+
+/* 5. The Monument Text Styling */
+.video-title {
+    font-family: 'Monument Extended', sans-serif;
+    font-weight: 800;
+    color:#c3b23e;
+    text-transform: uppercase;
+    margin-top: 20px;       /* Space between video and text */
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-align: center;
 }
