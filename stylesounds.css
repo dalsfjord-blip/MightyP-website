@@ -1,0 +1,160 @@
+/* --- FONTS --- */
+@font-face {
+    font-family: 'Monument Extended';
+    src: url('fonts/MonumentExtended-Ultrabold.otf') format('opentype');
+}
+
+/* --- BASE STYLES --- */
+body {
+    background-color: rgb(32, 33, 33);
+    color: white;
+    margin: 0;
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+/* --- HEADER & NAVIGATION --- */
+.main-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 20px;
+}
+
+.main-logo {
+    width: 180px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.main-logo:hover { transform: scale(1.05); }
+
+.social-links {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.social-links img {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s ease;
+}
+
+.social-links img:hover { transform: scale(1.2); }
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.menu-item img {
+    width: 140px;
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.menu-item img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* --- PLAYLIST & ROTATION --- */
+.playlist-section {
+    text-align: center;
+    margin: 60px 0;
+}
+
+.playlist-header {
+    font-family: 'Monument Extended', sans-serif;
+    color: #c3b23e;
+    font-size: 22px;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.playlist-img {
+    width: 180px;
+    height: auto;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Rotation starts immediately */
+.rotating {
+    animation: spin 8s linear infinite;
+}
+
+.playlist-content {
+    display: none; /* Toggled by JS */
+    width: 85%;
+    max-width: 500px;
+    margin: 30px auto;
+    background: rgba(26, 26, 26, 0.9);
+    padding: 25px;
+    border: 1px solid #c3b23e;
+    border-radius: 15px;
+}
+
+.show-playlist { display: block !important; }
+
+audio {
+    width: 100%;
+    filter: invert(1); /* Makes player white/silver */
+    margin-top: 15px;
+}
+
+.song-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.song-list li {
+    font-family: 'Monument Extended', sans-serif;
+    font-size: 11px;
+    padding: 12px;
+    border-bottom: 1px solid #333;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.song-list li:hover {
+    color: #c3b23e;
+    background: rgba(195, 178, 62, 0.1);
+}
+
+/* --- GALLERY --- */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.gallery-item {
+    height: 250px;
+    width: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* --- MOBILE --- */
+@media (max-width: 768px) {
+    .main-logo { width: 130px; }
+    .menu-item img { width: 100px; }
+    .playlist-header { font-size: 16px; }
+    .playlist-img { width: 140px; }
+    .gallery-item { height: 180px; flex: 1 1 45%; }
+}

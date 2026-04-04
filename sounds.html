@@ -3,60 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MightyP</title>
-<!--Link to stylesheet-->
-    <link rel="stylesheet" href="stylevideos.css">
+    <title>MightyP | Portfolio</title>
+    <link rel="stylesheet" href="stylesounds.css">
 </head>
-
 <body>
- <header class="main-header">
-    
-    
-    <a href="index.html" class="logo-link">
-    <div >
-        <img src="images/logo.png" alt="Logo" class="main-logo">
-    </div>
-</a>
 
-    <div id="mySocialLinks" class="social-links hidden-element">
-        <a href="https://www.instagram.com/__mightyp__" target="_blank">
-            <img src="images/insta.png" alt="Instagram">
+    <header class="main-header">
+        <a href="index.html" class="logo-link">
+            <img src="images/logo.png" alt="MightyP Logo" class="main-logo">
         </a>
-        <a href="https://www.facebook.com/p/Mighty-P-61566129863590/" target="_blank">
-            <img src="images/face.png" alt="Sosiale medier">
-        </a>
+
+        <div class="social-links">
+            <a href="https://instagram.com/__mightyp__" target="_blank"><img src="images/insta.png" alt="Instagram"></a>
+            <a href="https://facebook.com/p/Mighty-P-61566129863590/" target="_blank"><img src="images/face.png" alt="Facebook"></a>
+        </div>
+
+        <nav class="main-nav">
+            <a href="videos.html" class="menu-item"><img src="images/videos.png" alt="Videos"></a>
+            <a href="sounds.html" class="menu-item"><img src="images/sound.png" alt="Sounds"></a>
+            <a href="images-page.html" class="menu-item"><img src="images/images.png" alt="Images"></a>
+            <a href="stories.html" class="menu-item"><img src="images/stories.png" alt="Stories"></a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="playlist-section">
+    <h2 class="playlist-header">SCRATCHING ONE`S BACKS</h2>
+    <div class="playlist-trigger" onclick="togglePlaylist('playlistMenu1', this)">
+        <img src="images/vinyl_01.png" alt="Play" class="playlist-img rotating">
     </div>
 
-    
+    <div id="playlistMenu1" class="playlist-content">
+        <div class="player-ui">
+            <p id="title-1">SELECT A TRACK</p>
+            <audio id="player-1" controls><source src="" type="audio/mpeg"></audio>
+        </div>
+        <ul class="song-list">
+            <li onclick="playTrack('player-1', 'title-1', 'sounds/vol1-track1.mp3', 'VOL 1: TRACK 01')">TRACK 01</li>
+        </ul>
+    </div>
+</section>
 
-  <nav id="myMenu" class="hidden-menu">
-    <a href="videos.html" class="menu-item">
-        <img src="images/videos.png" alt="videos">
-    </a>
-    
-    <a href="sounds.html" class="menu-item">
-        <img src="images/sound.png" alt="sound">
-    </a>
-    
-    <a href="images-page.html" class="menu-item">
-        <img src="images/images.png" alt="images">
-    </a>
-    
-    <a href="stories.html" class="menu-item">
-        <img src="images/stories.png" alt="stories">
-    </a>
-</nav>
+<section class="playlist-section">
+    <h2 class="playlist-header">HIDE</h2>
+    <div class="playlist-trigger" onclick="togglePlaylist('playlistMenu2', this)">
+        <img src="images/vinyl_02.png" alt="Play" class="playlist-img rotating">
+    </div>
 
+    <div id="playlistMenu2" class="playlist-content">
+        <div class="player-ui">
+            <p id="title-2">SELECT A TRACK</p>
+            <audio id="player-2" controls><source src="" type="audio/mpeg"></audio>
+        </div>
+        <ul class="song-list">
+            <li onclick="playTrack('player-2', 'title-2', 'sounds/vol2-track1.mp3', 'VOL 2: TRACK 01')">TRACK 01</li>
+        </ul>
+    </div>
+</section>
+    </main>
 
-
-</header>
-
-
-  
-
-
-
-<!--Link to javascript-->
-<script src="script.js"></script>   
+    <script src="scriptsounds.js"></script>
 </body>
 </html>
