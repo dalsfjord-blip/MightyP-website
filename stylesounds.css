@@ -7,7 +7,7 @@
 /* --- BASE STYLES --- */
 body {
     background-color: rgb(32, 33, 33);
-    color: white;
+    color:  #c3b23e;
     margin: 0;
     font-family: sans-serif;
     overflow-x: hidden;
@@ -71,7 +71,7 @@ body {
 .playlist-header {
     font-family: 'Monument Extended', sans-serif;
     color: #c3b23e;
-    font-size: 22px;
+    font-size: 15px;
     letter-spacing: 3px;
     margin-bottom: 30px;
 }
@@ -109,7 +109,7 @@ body {
 audio {
     width: 100%;
     filter: invert(1); /* Makes player white/silver */
-    margin-top: 15px;
+    margin-top: 5px;
 }
 
 .song-list {
@@ -129,7 +129,7 @@ audio {
 }
 
 .song-list li:hover {
-    color: #c3b23e;
+    color: #b41e34;
     background: rgba(195, 178, 62, 0.1);
 }
 
@@ -157,4 +157,21 @@ audio {
     .playlist-header { font-size: 16px; }
     .playlist-img { width: 140px; }
     .gallery-item { height: 180px; flex: 1 1 45%; }
+}
+
+.bandcamp-link {
+    color: #c3b23e; /* Your Signature Gold/Yellow */
+    text-decoration: none; 
+    font-family: 'Monument Extended', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase; /* Makes it look like a bold button */
+    transition: all 0.4s ease; /* Smooth transition between colors */
+}
+
+.bandcamp-link:hover {
+    color: #b41e34; /* Switches to your Crimson Red */
+    /* This creates a deep red glow effect */
+    text-shadow: 0 0 8px rgba(180, 30, 52, 0.6), 
+                 0 0 20px rgba(180, 30, 52, 0.4); 
+    letter-spacing: 1px; /* Subtle "expansion" effect */
 }

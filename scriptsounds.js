@@ -13,7 +13,7 @@ function playTrack(playerId, titleId, file, title) {
     
     if (player && titleDisplay) {
         // Update the UI
-        titleDisplay.innerText = "NOW PLAYING: " + title;
+        titleDisplay.innerText = " " + title;
         
         // Load and Play the file
         player.src = file;
